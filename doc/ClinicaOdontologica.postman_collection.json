@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "444ebdfc-4816-4e7b-a203-7c92e8cc30f2",
+		"name": "ClinicaOdontologica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10174062"
+	},
+	"item": [
+		{
+			"name": "Dentista",
+			"item": [
+				{
+					"name": "Dentista - Listar Todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6IjM0NTQ2OCIsImlhdCI6MTY3MDk1NDMwNiwiZXhwIjoxNjcwOTU0NTQ2fQ.yOORqZyeUDgpCbWSW3aRf7XseqRILJSKcR0pGUHvtFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/dentistas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dentistas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dentista - Listar por Matricula",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6IjM0NTQ2OCIsImlhdCI6MTY3MDk1NDMwNiwiZXhwIjoxNjcwOTU0NTQ2fQ.yOORqZyeUDgpCbWSW3aRf7XseqRILJSKcR0pGUHvtFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/dentistas/0000003",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dentistas",
+								"0000003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dentista - Novo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Ik1hc3RlciIsImlhdCI6MTY3MDczMDAzMiwiZXhwIjoxNjcwNzMwMjcyfQ.HIIfFBrcP_cgU7acHNWsZNKwNSVYcxpYOuv4xw1z5NE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Ettore\",\r\n    \"sobrenome\" : \"Muniz\",\r\n    \"matricula\" : \"345468\",\r\n    \"usuario\":{\r\n        \"password\": \"123456\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/dentistas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dentistas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dentista - Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Ik1hc3RlciIsImlhdCI6MTY3MDczMDAzMiwiZXhwIjoxNjcwNzMwMjcyfQ.HIIfFBrcP_cgU7acHNWsZNKwNSVYcxpYOuv4xw1z5NE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/dentistas/0000004",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dentistas",
+								"0000004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dentista - Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk1NTI4MiwiZXhwIjoxNjcwOTU1NTIyfQ.eqbxzFhF84ficowB7JG7FW9-F4rqe9Ge0A513kwcH6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"nome\" : \"Dr Ettore\",\r\n \"sobrenome\" : \"Muniz\",\r\n \"matricula\" : \"345468\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/dentistas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dentistas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "PACIENTE - Listar todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/pacientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PACIENTE - Listar por RG",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/pacientes/419234664",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pacientes",
+								"419234664"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PACIENTE - Novo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"nome\": \"Larissa\",\r\n    \"sobrenome\": \"Natália Rodrigues\",\r\n    \"rg\": \"251660369\",\r\n    \"endereco\": {\r\n        \"cep\": \"05546-030\",\r\n        \"logradouro\": \"Praça Professor Vasco de Andrade\",\r\n        \"numero\": \"427\",\r\n        \"bairro\": \"Jardim Cláudia\",\r\n        \"localidade\": \"São Paulo\",\r\n        \"uf\": \"SP\"\r\n    },\r\n    \"usuario\":{\r\n        \"password\": \"123456\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/pacientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PACIENTE - Deletar ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/pacientes/383959408",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pacientes",
+								"383959408"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PACIENTE - Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"nome\": \"Larissa\",\r\n    \"sobrenome\": \"Natália Melo Rodrigues\",\r\n    \"rg\": \"251660369\",\r\n    \"endereco\": {\r\n        \"cep\": \"05546-030\",\r\n        \"logradouro\": \"Praça Professor Vasco de Andrade\",\r\n        \"numero\": \"427\",\r\n        \"bairro\": \"Jardim Cláudia\",\r\n        \"localidade\": \"São Paulo\",\r\n        \"uf\": \"SP\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/pacientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consultas",
+			"item": [
+				{
+					"name": "CONSULTA - Listar todas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/consultas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CONSULTA - Listar por rg",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/consultas/383959408",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"consultas",
+								"383959408"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CONSULTA - Novo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dhConsulta\": \"2022-12-29T10:30:00\",\r\n    \"rgPaciente\": \"383959408\",\r\n    \"matriculaDentista\": \"0000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/consultas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CONSULTA - Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Im1hc3RlciIsImlhdCI6MTY3MDk2MjI5MCwiZXhwIjoxNjcwOTYyNTMwfQ.6NGul4tk7XqQ4E0GPLhY2eRQ0Bo_HWe7IJ7DdtyPj-k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"consultaId\": 1,\r\n    \"rgPaciente\": \"383959408\",\r\n    \"matriculaDentista\": \"0000001\",\r\n    \"dhConsulta\": \"2022-12-20T12:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/consultas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CONSULTA - Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6Ik1hc3RlciIsImlhdCI6MTY3MDcxOTg0OCwiZXhwIjoxNjcwNzIwMDg4fQ.w1NspyAXf0NwmDB0SZUxcjm8sg0S3vgFB7uwKwHpP0I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"consultaId\": 1,\r\n    \"rgPaciente\": \"383959408\",\r\n    \"matriculaDentista\": \"0000001\",\r\n    \"dhConsulta\": \"2022-12-03T11:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/consultas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autenticação",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"master\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Thiago\",\r\n    \"password\": \"1a2b3c\",\r\n    \"perfis\":[\r\n        {\r\n            \"id\": 1\r\n        },\r\n          {\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/usuario",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Perfil",
+			"item": [
+				{
+					"name": "Listar Perfis",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgQ2xpbmljYU9kb250byIsInN1YiI6IlVzZXJNYXN0ZXIiLCJpYXQiOjE2NzA4OTUyMjgsImV4cCI6MTY3MDg5NTQ2OH0.1H7yWszMBSlLNm7SxBvp90js9pbqHtAP971loUUxnPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/perfis",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"perfis"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
